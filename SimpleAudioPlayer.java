@@ -137,8 +137,7 @@ public class SimpleAudioPlayer
 	}
 	
 	// Method to pause the audio
-	public void pause()
-	{
+	public void pause(){
 		if (status.equals("paused"))
 		{
 			System.out.println("audio is already paused");
