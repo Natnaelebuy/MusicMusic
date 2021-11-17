@@ -118,9 +118,7 @@ public class SimpleAudioPlayer
 			case 8:
 			    System.out.println("-->favorte<--");
 				Search();
-				break;
-
-	
+				break;	
 		}
 	
 	}
@@ -128,8 +126,6 @@ public class SimpleAudioPlayer
 	private void play(String song2) {
 		
 	}
-
-	
 
 	// Method to play the audio
 	public void play()
@@ -222,14 +218,13 @@ public class SimpleAudioPlayer
           Songlist[1] = "./song/DJ Khaled-Hold you down.wav";
           Songlist[2] = "./song/Ed Sheeran - Shape of You.wav";
           Songlist[3] = "./song/Migos - Bad and Boujee (feat. Lil Uzi Vert).wav";
-          Songlist[4] = "./ song/Travis Scott - Niagara Falls Ft 21 Savage.wav";
+          Songlist[4] = "./song/Travis Scott - Niagara Falls Ft 21 Savage.wav";
 
         for(int k = 0; k < Songlist.length; k++)
         {
             int a = k+1;
             System.out.println(a + Songlist[k]);
-        }
-        
+        }        
         System.out.println("Please choose a song");
         Scanner Selection = new Scanner(System.in);
         int Choice;
