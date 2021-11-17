@@ -1,7 +1,10 @@
 [
   {
-    "name": "Peyton Jenkins",
-    "birthday": "9/22/2013"
+    "name": "Dj Khaled",
+    "title":"Do You Mind",
+    "year": "2015",
+    "genre":"Hip-Hop",
+    "filePath":"./song/DJ Khaled- Do You Mind.wav"
   },
   {
     "name": "Neil Harber",
