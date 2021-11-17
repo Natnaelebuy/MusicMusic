@@ -7,12 +7,14 @@ import java.util.Scanner;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class SimpleAudioPlayer
 {
 
+	private static final boolean Playing = false;
 	// to store current position
 	Long currentFrame;
 	Clip clip;
@@ -22,6 +24,7 @@ public class SimpleAudioPlayer
 	
 	AudioInputStream audioInputStream;
 	static String filePath;
+	private static String song;
 
 	// constructor to initialize streams and clip
 	public SimpleAudioPlayer()
@@ -59,6 +62,8 @@ public class SimpleAudioPlayer
 				System.out.println("3. restart");
 				System.out.println("4. stop");
 				System.out.println("5. Jump to specific time");
+				System.out.println("6, search");
+				System.out.println("7, Play");
 				int c = sc.nextInt();
 				audioPlayer.gotoChoice(c);
 				if (c == 4)
@@ -101,11 +106,25 @@ public class SimpleAudioPlayer
 				long c1 = sc.nextLong();
 				jump(c1);
 				break;
+			case 6:	
+                System.out.println("-->Search by title<--");
+                Search();
+                break;
+			case 7:
+                System.out.println("-->Play<--");
+                play(song);
+                break;
 	
 		}
 	
 	}
 	
+	private void play(String song2) {
+		
+	}
+
+	
+
 	// Method to play the audio
 	public void play()
 	{
@@ -190,6 +209,28 @@ public class SimpleAudioPlayer
 		clip.open(audioInputStream);
 		clip.loop(Clip.LOOP_CONTINUOUSLY);
 	}
+	public static void Search() {
+        String[] Songlist;
+        Songlist = new String[5];
+          Songlist[0] = "./Mysong/DJ Khaled- Do You Mind";
+          Songlist[1] = "./Mysong/DJ Khaled-Hold you down.wav";
+          Songlist[2] = "./Mysong/Ed Sheeran - Shape of You.wav";
+          Songlist[3] = "./Mysong/Migos - Bad and Boujee (feat. Lil Uzi Vert).wav";
+          Songlist[4] = "./Mysong/Travis Scott - Niagara Falls Ft 21 Savage.wav";
+
+        for(int k = 0; k < Songlist.length; k++)
+        {
+            int a = k+1;
+            System.out.println(a + Songlist[k]);
+        }
+        
+        System.out.println("Please choose a song");
+        Scanner Selection = new Scanner(System.in);
+        int Choice;
+        Choice = Selection.nextInt() - 1;
+        song = Songlist[Choice];
+        
+    }
 
 }
 
