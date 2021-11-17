@@ -218,11 +218,11 @@ public class SimpleAudioPlayer
 	public static void Search() {
         String[] Songlist;
         Songlist = new String[5];
-          Songlist[0] = "./Mysong/DJ Khaled- Do You Mind";
-          Songlist[1] = "./Mysong/DJ Khaled-Hold you down.wav";
-          Songlist[2] = "./Mysong/Ed Sheeran - Shape of You.wav";
-          Songlist[3] = "./Mysong/Migos - Bad and Boujee (feat. Lil Uzi Vert).wav";
-          Songlist[4] = "./Mysong/Travis Scott - Niagara Falls Ft 21 Savage.wav";
+          Songlist[0] = "./song/DJ Khaled- Do You Mind";
+          Songlist[1] = "./song/DJ Khaled-Hold you down.wav";
+          Songlist[2] = "./song/Ed Sheeran - Shape of You.wav";
+          Songlist[3] = "./song/Migos - Bad and Boujee (feat. Lil Uzi Vert).wav";
+          Songlist[4] = "./ song/Travis Scott - Niagara Falls Ft 21 Savage.wav";
 
         for(int k = 0; k < Songlist.length; k++)
         {
