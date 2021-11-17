@@ -64,6 +64,7 @@ public class SimpleAudioPlayer
 				System.out.println("5. Jump to specific time");
 				System.out.println("6, search");
 				System.out.println("7, Play");
+				System.out.println("8, favorte");
 				int c = sc.nextInt();
 				audioPlayer.gotoChoice(c);
 				if (c == 4)
@@ -114,6 +115,11 @@ public class SimpleAudioPlayer
                 System.out.println("-->Play<--");
                 play(song);
                 break;
+			case 8:
+			    System.out.println("-->favorte<--");
+				Search();
+				break;
+
 	
 		}
 	
