@@ -128,8 +128,7 @@ public class SimpleAudioPlayer
 	}
 
 	// Method to play the audio
-	public void play()
-	{
+	public void play(){
 		//start the clip
 		clip.start();
 		
@@ -210,6 +209,7 @@ public class SimpleAudioPlayer
 		clip.open(audioInputStream);
 		clip.loop(Clip.LOOP_CONTINUOUSLY);
 	}
+	
 	public static void Search() {
         String[] Songlist;
         Songlist = new String[5];
